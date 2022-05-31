@@ -1,0 +1,203 @@
+@import "../../styles/style.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 70px;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  @include transition_c(all 0.5s ease-out);
+  &__logo {
+    width: 100px;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    z-index: 2;
+    @include transform_c(translateX(-50%));
+    @include transition_c(all 0.5s ease-out);
+  }
+  &__hamberger {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+    @include transition_c(all 0.5s ease-out);
+    .language {
+      display: flex;
+      padding-right: 20px;
+      opacity: 0;
+      pointer-events: none;
+      @include transform_c(translateX(40px));
+      @include transition_c(all 0.5s ease-out);
+      button {
+        color: rgba($color: $white, $alpha: 0.5);
+        font-family: $bebas;
+        font-size: 16px;
+        padding: 0 10px;
+        position: relative;
+        @include transition_c(all 0.5s ease-out);
+        &:nth-child(1):before {
+          content: "";
+          position: absolute;
+          background: $white;
+          width: 1px;
+          height: 12px;
+          top: 50%;
+          right: 0;
+          @include transform_c(translateY(-50%));
+          @include transition_c(all 0.5s ease-out);
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          background: $white;
+          border-radius: 50%;
+          width: 3px;
+          height: 3px;
+          bottom: -4px;
+          left: 50%;
+          opacity: 0;
+          @include transform_c(translateX(-50%));
+          @include transition_c(all 0.5s ease-out);
+        }
+        &.active {
+          color: $white;
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+
+      &--active {
+        opacity: 1;
+        pointer-events: auto;
+        @include transform_c(translateX(0));
+      }
+    }
+    #hamberger {
+      display: block;
+      width: 40px;
+      height: 14px;
+      position: relative;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background: $white;
+        width: 100%;
+        height: 2px;
+        left: 0;
+      }
+      &::before {
+        top: 0;
+        @include transition_c((top 0.15s 0.3s, transform 0.3s));
+      }
+      &::after {
+        bottom: 0;
+        @include transition_c((bottom 0.15s 0.3s, transform 0.3s));
+      }
+    }
+
+    &--active {
+      opacity: 1;
+      pointer-events: auto;
+      #hamberger {
+        &::before {
+          top: calc(50% - 1px);
+          @include transform_c(rotate(45deg) scale(0.7));
+          @include transition_c((top 0.15s, transform 0.3s 0.3s));
+        }
+        &::after {
+          bottom: calc(50% - 1px);
+          @include transform_c(rotate(-45deg) scale(0.7));
+          @include transition_c((bottom 0.15s, transform 0.3s 0.3s));
+        }
+      }
+    }
+  }
+  &__menu {
+    background: $black;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    @include transition_c(all 0.5s ease-out);
+    ul {
+      li {
+        display: flex;
+        justify-content: center;
+        opacity: 0;
+        @include transform_c(translateY(20px));
+        &:nth-child(1) {
+          @include transition_c(all 0.5s 0.9s ease-out);
+        }
+        &:nth-child(2) {
+          @include transition_c(all 0.5s 0.8s ease-out);
+        }
+        &:nth-child(3) {
+          @include transition_c(all 0.5s 0.7s ease-out);
+        }
+        &:nth-child(4) {
+          @include transition_c(all 0.5s 0.6s ease-out);
+        }
+        &:nth-child(5) {
+          @include transition_c(all 0.5s 0.5s ease-out);
+        }
+        a {
+          color: $grey-medium;
+          font-family: $bebas;
+          font-size: 72px;
+          line-height: 84px;
+          text-decoration: none;
+          position: relative;
+          &:hover::before {
+            width: 100%;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            background: currentColor;
+            width: 0;
+            height: 5px;
+            bottom: 0;
+            left: 0;
+            @include transition_c(all 0.5s ease-out);
+          }
+        }
+      }
+    }
+
+    &--active {
+      opacity: 1;
+      pointer-events: auto;
+      ul li {
+        opacity: 1;
+        @include transform_c(translateY(0));
+      }
+    }
+  }
+
+  &--active {
+    .header__logo {
+      width: 40px;
+      left: 15px;
+      @include transform_c(translateX(0));
+    }
+
+    .header__hamberger {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+$browser_prefix: ("-webkit-", "-moz-", "-ms-", "-o-", "");
+
+@mixin add_prefix($key, $value) {
+  @each $prefix in $browser_prefix {
+    #{$prefix + $key}: $value;
+  }
+}
+
+@mixin transform_c($content) {
+  @each $prefix in $browser_prefix {
+    #{$prefix}transform: $content;
+  }
+}
+
+@mixin transition_c($content, $opt: "") {
+  @each $prefix in $browser_prefix {
+    @if ($opt == "") {
+      #{$prefix}transition: $content;
+    } @else {
+      #{$prefix}transition-#{$opt}: $content;
+    }
+  }
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before{
+    display: block;
+    content: " ";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
