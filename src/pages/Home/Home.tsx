@@ -3,14 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 
 /* IMAGES */
-import img_artist_01 from "../../images/home/img_artist_01.jpeg";
-import img_artist_02 from "../../images/home/img_artist_02.jpeg";
-import img_artist_03 from "../../images/home/img_artist_03.jpeg";
-import img_artist_04 from "../../images/home/img_artist_04.jpeg";
-import img_artist_05 from "../../images/home/img_artist_05.jpeg";
-import img_artist_06 from "../../images/home/img_artist_06.jpeg";
-import img_artist_07 from "../../images/home/img_artist_07.jpeg";
-import img_artist_08 from "../../images/home/img_artist_08.jpeg";
+import img_artist_01 from "../../images/home/img_artist_01.jpg";
+import img_artist_02 from "../../images/home/img_artist_02.jpg";
 
 import img_space_video from "../../images/home/img_space_video.jpeg";
 import img_space_01 from "../../images/home/img_space_01.jpeg";
@@ -65,13 +59,10 @@ const Home = () => {
     <div id="home" className="home">
       <section id="main-visual" className="main-visual">
         <div className="main-visual__container container">
-          <h1 className="page-title">BANG BANG NYC</h1>
+          <h1 className="page-title">NEW CHOICE TATTOO</h1>
           <div className="page-desc">
             <p>
-              <a href="#location01">62 Grand Street NYC</a>
-            </p>
-            <p>
-              <a href="#location02">328 Broome Street NYC</a>
+              <a href="#location01">337/6 Nguyen Dinh Chieu st. HCMC VN</a>
             </p>
           </div>
         </div>
@@ -87,15 +78,11 @@ const Home = () => {
           <li>
             <h2 className="ttl">LOCATIONS</h2>
             <p className="txt">
-              62 GRAND STREET <br />
-              NEW YORK NY 10013
+              337/6 NGUYEN DINH CHIEU STREET <br />
+              HO CHI MINH city VN 700000
             </p>
             <p className="txt">
-              328 BROOME STREET <br />
-              NEW YORK NY 10002
-            </p>
-            <p className="txt">
-              <a href="#website">BANG BANG SHOP</a>
+              <a href="#website">NEW CHOICE SHOP</a>
             </p>
           </li>
           <li>
@@ -131,13 +118,9 @@ const Home = () => {
             <a href="#personal-gallery" className="view">
               VIEW GALLERY
             </a>
-            <h2 className="name">BANG BANG</h2>
+            <h2 className="name">JUN TEPPEI</h2>
             <p className="overview">
-              Owner/operator Keith “Bang Bang” McCurdy has tattooed Rihanna in
-              the tropics, Lebron James in his basement, Cara Delevingne on a
-              roof, Katy Perry in Stockholm’s Abba Museum, and Justin Bieber on
-              a plane at 30,000 feet. Stay tuned and check Instagram for an
-              availability announcement!
+              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet autem beatae, consequuntur delectus eligendi est facilis id in incidunt iusto neque nihil placeat provident recusandae sapiente sequi tempora voluptate?</span><span>Aperiam atque dicta dolore facere illum in, ipsum itaque iusto officia optio qui reiciendis repudiandae similique temporibus tenetur, voluptatem voluptatibus? Dicta eligendi incidunt ipsa iusto obcaecati reprehenderit temporibus vel voluptatibus.</span>
             </p>
           </li>
           <li>
@@ -148,122 +131,12 @@ const Home = () => {
             <a href="#personal-gallery" className="view">
               VIEW GALLERY
             </a>
-            <h2 className="name">LIZ</h2>
+            <h2 className="name">JOHN</h2>
             <p className="overview">
-              Specializes in illustrative fine art in color & black and gray.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at, atque cumque enim fugiat harum illo incidunt laudantium libero nam nostrum nulla praesentium quae repellat tenetur totam veritatis voluptatibus voluptatum?
               <br />
               <br />
-              Liz has a great grasp of feminine style and design along with a
-              completely unique take on tattooing. She is sought after and known
-              for her laser like precision.
-            </p>
-          </li>
-          <li>
-            <div
-              className="avatar"
-              style={{ backgroundImage: `url('${img_artist_03}')` }}
-            ></div>
-            <a href="#personal-gallery" className="view">
-              VIEW GALLERY
-            </a>
-            <h2 className="name">KRISTI</h2>
-            <p className="overview">
-              Specializes in ornamental pattern design, floral & mandalas.
-              <br />
-              <br />
-              Kristi says,"I surround myself with things I enjoy everyday.
-              Moving to New York was my main inspiration to become a full time
-              tattoo artist. It’s been over 12 years and I still feel
-              impassioned and inspired in my artwork."
-            </p>
-          </li>
-          <li>
-            <div
-              className="avatar"
-              style={{ backgroundImage: `url('${img_artist_04}')` }}
-            ></div>
-            <a href="#personal-gallery" className="view">
-              VIEW GALLERY
-            </a>
-            <h2 className="name">NATASHIA</h2>
-            <p className="overview">
-              Specializes in realism and fine line.
-              <br />
-              <br />
-              Natashia says, “Each person I work with I see as a unique canvas
-              with the intent to be adorned. Nothing truly compares to the
-              feeling of giving my clients a meaningful and beautiful tattoo for
-              them to cherish on their life’s journey.”
-            </p>
-          </li>
-          <li>
-            <div
-              className="avatar"
-              style={{ backgroundImage: `url('${img_artist_05}')` }}
-            ></div>
-            <a href="#personal-gallery" className="view">
-              VIEW GALLERY
-            </a>
-            <h2 className="name">DEZ</h2>
-            <p className="overview">
-              Specializes in black and gray realism.
-              <br />
-              <br />
-              The pride he takes in his work is evident as he continues to build
-              his portfolio with unique and original designs. Dez says, "Having
-              the opportunity to work with the best artists in the world
-              inspires me daily. Words cannot describe how amazing it is to be a
-              part of such a fantastic group."
-            </p>
-          </li>
-          <li>
-            <div
-              className="avatar"
-              style={{ backgroundImage: `url('${img_artist_06}')` }}
-            ></div>
-            <a href="#personal-gallery" className="view">
-              VIEW GALLERY
-            </a>
-            <h2 className="name">ROB</h2>
-            <p className="overview">
-              Specializes in illustrative color, fine line and graphic new
-              school.
-              <br />
-              <br />
-              Rob met Bang Bang while they traded off window shifts at another
-              shop. They only put the best artists in the window, so when Bang
-              Bang opened his own place, Rob was one of the first hires.
-            </p>
-          </li>
-          <li>
-            <div
-              className="avatar"
-              style={{ backgroundImage: `url('${img_artist_07}')` }}
-            ></div>
-            <a href="#personal-gallery" className="view">
-              VIEW GALLERY
-            </a>
-            <h2 className="name">HECTOR</h2>
-            <p className="overview">
-              Specializes in calligraphy and fine line.
-              <br />
-              <br />
-              Hector’s incredible talent, attention to detail, and precise line
-              work, combined with an incredibly positive attitude, make him one
-              of the shop’s most sought-after artists.
-            </p>
-          </li>
-          <li>
-            <div
-              className="avatar"
-              style={{ backgroundImage: `url('${img_artist_08}')` }}
-            ></div>
-            <a href="#personal-gallery" className="view">
-              VIEW GALLERY
-            </a>
-            <h2 className="name">YUUZ</h2>
-            <p className="overview">
-              Specializes in Asian Neo traditional art.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium corporis deleniti dolorem doloribus enim eveniet fugit iste iure, iusto labore nesciunt odit quae quam qui, quidem rem tempora, vero voluptatum?
             </p>
           </li>
         </ul>
@@ -285,7 +158,7 @@ const Home = () => {
               alt="62 Grand Street New York NY 10013"
             />
           </button>
-          <p className="spaces__txt">62 Grand Street New York NY 10013</p>
+          <p className="spaces__txt">337/6 Nguyen Dinh Chieu, Ho Chi Minh city VN 700000</p>
           <div className="spaces__carousel">
             <Slider {...carouselSetting}>
               <div className="item">
@@ -415,7 +288,7 @@ const Home = () => {
       <section id="about" className="about">
         <div className="page-banner">
           <div className="container">
-            <h1 className="page-title">BANG BANG : MY LIFE IN INK</h1>
+            <h1 className="page-title">FAVOURITE QUOTES</h1>
           </div>
         </div>
         <div className="about__container container">
@@ -424,39 +297,17 @@ const Home = () => {
           </div>
           <div className="content">
             <p>
-              The celebrity tattoo artist takes fans on a tour through his life
-              and art, combining captivating vignettes and stories with more
-              than one hundred color photos.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. A atque debitis dicta dolor dolore earum illum in, incidunt magni modi natus nemo neque nisi nobis perspiciatis, quasi sequi tenetur vitae.
               <br />
               <br />
-              Justin Bieber, Katy Perry, Rita Ora, Cara Delevingne, Rihanna, and
-              many more of the hottest celebrities in the world have been seen
-              on the red carpet, on concert stages, and in magazine spreads
-              wearing stunning ink created by Keith “Bang Bang” McCurdy, the
-              most in-demand tattoo artist in the entertainment world. Bang
-              Bang’s work has taken him across the country and around the globe,
-              to any and every locale a celebrity client may request. From
-              Rihanna’s controversial gun tattoos, to inking Justin Bieber at
-              40,000 feet. Each of Bang Bang’s tattoos comes with its own epic
-              story. Now, this creative genius invites readers along on his
-              adventures, sharing amazing tales from his life and career.
+              <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto consectetur corporis distinctio esse, est ex, ipsa libero modi natus nemo nihil officia quis quod saepe ullam ut voluptate voluptatibus.</span><span>Accusamus accusantium alias assumenda distinctio doloremque ea excepturi facilis hic id in laboriosam laborum magni modi molestiae neque officiis pariatur perspiciatis quaerat quisquam ratione similique suscipit tempora, temporibus vel voluptatum?</span><span>Adipisci at atque commodi consequatur consequuntur corporis cumque debitis dolor dolorum ea et eveniet ipsum iusto laboriosam laborum magnam magni modi, neque optio placeat praesentium repudiandae vero vitae voluptatem voluptatum.</span><span>Accusamus beatae corporis cupiditate dicta eius est facere mollitia quam similique, sit. Architecto at atque blanditiis consequatur dignissimos doloremque, eligendi, enim explicabo impedit iusto nostrum, praesentium quidem ratione sapiente voluptatibus.</span><span>Iure possimus praesentium vel veniam! Hic, nostrum, tenetur! Aperiam architecto asperiores atque eos illo illum ipsa itaque libero nisi nostrum officiis, quas quisquam similique veniam, vero voluptas, voluptate voluptates voluptatibus?</span><span>Accusantium asperiores corporis eius enim esse expedita, facere facilis fugit maiores modi nulla numquam optio porro possimus, quasi quis ratione repellendus, velit veritatis voluptate? Autem dolorum officia ratione repellat unde.</span><span>A aliquid aperiam architecto, beatae cumque deserunt dignissimos dolore esse est eum hic id iste iure mollitia placeat possimus sit! Consectetur eum eveniet excepturi labore quam quasi quis repellendus tenetur?</span><span>Delectus id nemo nihil quod rerum suscipit ut? Ab aperiam commodi consectetur culpa cumque dignissimos inventore nobis quibusdam quidem voluptatum! Illum incidunt labore magnam minima omnis, possimus qui repudiandae similique?</span>
             </p>
             <p>
-              Named for the duel guns tattooed on his neck, Bang Bang began his
-              career in his mom’s tiny Delaware kitchen. Self-taught, he
-              practiced with a tattoo kit bought online before eventually moving
-              to New York. Over the past decade, Bang Bang’s talent and vision
-              propelled his rise into the spotlight, and today, his fresh,
-              accessible aesthetic draws men and women, tattoo vets and novices
-              alike eager to experience his ultra-fluid and realistic designs
-              created with the finest needles and inks. Bang Bang’s visual style
-              transcends the clichés of the tattoo world; he creates a truly
-              different form of art.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. At delectus deleniti dignissimos exercitationem id labore laboriosam nisi perferendis placeat quaerat quia quod repellat repellendus, tempora veniam voluptas voluptatum. Ad excepturi repudiandae saepe! Adipisci beatae cupiditate doloribus esse est ex facilis magni nam nemo nostrum reiciendis, repudiandae sunt ullam voluptatem voluptatibus? Aperiam consequuntur ex ipsum nihil saepe! Ad aliquid consequatur deleniti dolores est, eum fugiat, incidunt libero minima modi mollitia placeat provident quae quia tempore, voluptate voluptates voluptatibus voluptatum? Atque corporis error maxime officia, praesentium quo? Accusamus adipisci dolore facilis, fugit ipsam iste magnam perferendis placeat sint, tempora temporibus vel, voluptatum.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate deleniti dicta libero omnis repudiandae. Aliquid consequatur consequuntur, dolores itaque molestias nostrum perferendis, possimus sapiente sit soluta, temporibus vitae! Beatae, deleniti.
               <br />
               <br />
-              Filled with engaging personal stories and striking photographs
-              that bring his bold, vibrant designs into detail, Bang Bang is a
-              must-have for Bang Bang fans and tattoo lovers everywhere.{" "}
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores consectetur culpa cum, cumque dolore dolorum ea eligendi eos esse eum exercitationem explicabo illum ipsa iste iure, laboriosam modi natus nesciunt, odio officia provident quibusdam repellat repudiandae rerum soluta vel! Aliquam culpa cum delectus dolore ducimus ea eligendi eos explicabo facilis id impedit iste labore laudantium magnam minus modi nemo neque nulla odio officiis omnis pariatur perferendis porro, possimus quae quaerat quam quas quibusdam quidem quisquam ratione recusandae reprehenderit sapiente tempore totam vel voluptates? Accusantium aliquid commodi consectetur cumque debitis doloremque dolores eligendi ex, facere fugiat id non, numquam, omnis provident quae quasi quibusdam sed similique sunt tempore? A accusantium aliquam, aspernatur at dicta dignissimos dolore ducimus eius, iste minus modi officia quam quibusdam recusandae soluta totam voluptatem! At, atque autem blanditiis consectetur culpa explicabo, illo impedit in laudantium nemo nostrum optio, quisquam ratione reprehenderit soluta tempora ut. Alias aperiam asperiores culpa, cumque cupiditate dolores doloribus error esse facilis inventore, magni maiores natus nihil obcaecati quia quibusdam reprehenderit saepe ullam ut velit? Earum eligendi hic, quaerat reiciendis ullam vel. Aliquid error iure nesciunt qui. Accusamus aliquam aperiam aspernatur atque beatae blanditiis consectetur cupiditate dicta, distinctio dolor dolorem ducimus enim esse est et excepturi expedita explicabo facilis harum incidunt itaque iure laboriosam mollitia nulla odit quia quis quisquam ratione recusandae reiciendis saepe tempore voluptas voluptatem! Cupiditate nemo nihil nostrum perferendis quaerat quibusdam, sed soluta tenetur voluptate voluptatum. A accusamus alias eius et, facere harum laudantium mollitia nobis nostrum provident quasi quibusdam recusandae rem rerum, tempora tenetur unde vitae! Aperiam facilis ipsum itaque iure laboriosam mollitia quisquam sequi veniam voluptates. Accusantium ad adipisci, aliquid asperiores beatae deserunt id incidunt ipsa libero nesciunt numquam officiis optio porro quo, sed tenetur velit? Eaque exercitationem nemo quia quibusdam sapiente sint voluptates. Corporis sed similique tempora!{" "}
             </p>
           </div>
           <ul className="os">
