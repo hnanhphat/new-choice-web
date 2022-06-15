@@ -1,0 +1,114 @@
+@import "../../../styles/style.scss";
+
+.OurSpace {
+  background: darkgrey;
+  padding: 100px 0;
+  &__Container {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+    max-width: 1000px;
+    margin: 0 auto;
+    .Content {
+      width: 75%;
+      padding: 0 20px;
+      &__Carousel {
+        font-size: 0;
+        line-height: 0;
+        .Item {
+          .Img {
+            @include aspect-ratio(96, 53);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+          }
+        }
+
+        > button {
+          background: rgba($color: black, $alpha: 0.5);
+          width: 30px;
+          height: 100%;
+          font-size: 0;
+          opacity: 0;
+          position: absolute;
+          top: 50%;
+          z-index: 1;
+          @include transform_c(translateY(-50%));
+          @include transition_c(all 0.3s ease-out);
+          &::before {
+            content: "";
+            position: absolute;
+            border-bottom: 2px solid white;
+            border-left: 2px solid white;
+            width: 8px;
+            height: 8px;
+            top: 50%;
+            left: 50%;
+            @include transition_c(all 0.3s ease-out);
+          }
+          &:nth-of-type(1) {
+            left: 0;
+            &::before {
+              @include transform_c(translate(-25%, -50%) rotate(45deg));
+            }
+          }
+          &:nth-of-type(2) {
+            right: 0;
+            &::before {
+              @include transform_c(translate(-75%, -50%) rotate(-135deg));
+            }
+          }
+
+          @include hover {
+            &:nth-of-type(1)::before {
+              left: calc(50% - 4px);
+            }
+            &:nth-of-type(2)::before {
+              left: calc(50% + 4px);
+            }
+          }
+        }
+
+        > ul {
+          display: flex !important;
+          align-items: center;
+          justify-content: center;
+          width: calc(100% - 60px);
+          height: 30px;
+          position: absolute;
+          bottom: 0;
+          left: 30px;
+          li {
+            padding: 0 2px;
+            button {
+              background: white;
+              width: 20px;
+              height: 2px;
+              @include transition_c(all 0.3s ease-out);
+            }
+            &.slick-active button {
+              background: black;
+            }
+          }
+        }
+
+        @include hover {
+          > button {
+            opacity: 1;
+          }
+        }
+      }
+      &__Txt {
+        padding: 20px;
+        text-align: justify;
+      }
+    }
+    .Heading {
+      display: flex;
+      justify-content: center;
+      width: 25%;
+      padding: 50px 0;
+    }
+  }
+}

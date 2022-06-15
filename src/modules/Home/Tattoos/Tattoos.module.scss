@@ -1,0 +1,63 @@
+@import "../../../styles/style.scss";
+
+.Tattoos {
+  background: black;
+  padding: 100px 0;
+  &__Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+    max-width: 1000px;
+    margin: 0 auto;
+    .Heading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40%;
+    }
+    .Carousel {
+      width: 60%;
+      padding-left: 100px;
+      .Item {
+        .Img {
+          @include aspect-ratio(390, 585);
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 100%;
+        }
+      }
+
+      > button {
+        background: white;
+        width: 72px;
+        height: 32px;
+        font-size: 0;
+        position: absolute;
+        left: 14px;
+        &:nth-of-type(1) {
+          border-top-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+          top: calc(50% - 6px);
+          @include transform_c(translateY(-100%))
+        }
+        &:nth-of-type(2) {
+          border-bottom-left-radius: 20px;
+          border-top-right-radius: 20px;
+          bottom: calc(50% - 6px);
+          @include transform_c(translateY(100%))
+        }
+      }
+    }
+    .View {
+      width: 100%;
+      padding-top: 40px;
+      text-align: right;
+      a {
+        border-bottom: 1px solid currentColor;
+        font-size: 16px;
+      }
+    }
+  }
+}

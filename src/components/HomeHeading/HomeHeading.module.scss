@@ -1,0 +1,18 @@
+@import "../../styles/style.scss";
+
+.HomeHeading {
+  font-family: $jp;
+  font-size: 52px;
+  font-weight: bold;
+  line-height: 60px;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  span {
+    display: block;
+  }
+
+  &--white {
+    color: #fff;
+  }
+}

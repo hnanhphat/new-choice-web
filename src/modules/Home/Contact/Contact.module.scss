@@ -1,0 +1,36 @@
+@import "../../../styles/style.scss";
+
+.Contact {
+  padding: 150px 20px;
+  text-align: center;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 2px;
+    height: 100px;
+    top: 0;
+    left: 50%;
+    @include transform_c(translateX(-50%));
+  }
+  &__Heading {
+    font-size: 48px;
+    font-weight: bold;
+    padding-bottom: 30px;
+  }
+  &__Btn {
+    background: #fff;
+    border: 3px solid #fff;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: #000;
+    font-size: 14px;
+    padding: 10px 20px;
+    @include transition_c(all .3s ease-out);
+    @include hover {
+      background: transparent;
+      color: #fff;
+    }
+  }
+}

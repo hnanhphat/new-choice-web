@@ -24,7 +24,7 @@ $browser_prefix: ("-webkit-", "-moz-", "-ms-", "-o-", "");
 
 @mixin aspect-ratio($width, $height) {
   position: relative;
-  &:before{
+  &:before {
     display: block;
     content: " ";
     width: 100%;
@@ -36,5 +36,25 @@ $browser_prefix: ("-webkit-", "-moz-", "-ms-", "-o-", "");
     left: 0;
     right: 0;
     bottom: 0;
+  }
+}
+
+@mixin PC {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin SP {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @include PC {
+    &:hover {
+      @content;
+    }
   }
 }
