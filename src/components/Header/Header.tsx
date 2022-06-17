@@ -12,7 +12,7 @@ const Header = () => {
 
   useEffect(() => {
     window.onscroll = () => {
-      if (window.scrollY > 70) {
+      if (window.scrollY > window.innerHeight / 2) {
         setShowHeader(true);
       } else {
         setShowHeader(false);
@@ -38,6 +38,7 @@ const Header = () => {
       <Link to="/" className="header__logo">
         <img src={logo} alt="New Choice Tattoo" />
       </Link>
+      <h1 className="header__ttl">New Choice Tattoo</h1>
       <div
         className={`header__hamberger ${
           showMenu ? "header__hamberger--active" : ""

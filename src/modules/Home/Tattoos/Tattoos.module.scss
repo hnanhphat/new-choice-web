@@ -10,6 +10,12 @@
     width: calc(100% - 40px);
     max-width: 1000px;
     margin: 0 auto;
+    .Logo {
+      width: 140px;
+      img {
+        width: 100%;
+      }
+    }
     .Heading {
       display: flex;
       align-items: center;
