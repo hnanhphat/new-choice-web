@@ -15,6 +15,9 @@
   left: 0;
   z-index: 10;
   @include transition_c(all 0.5s ease-out);
+  @include SP {
+    height: 70px;
+  }
   &__logo {
     position: absolute;
     width: 60px;
@@ -22,12 +25,19 @@
     left: 15px;
     z-index: 2;
     @include transition_c(all 0.5s ease-out);
+    @include SP {
+      width: 40px;
+    }
   }
   &__ttl {
     font-family: $jp;
     padding-left: 80px;
     margin: 0;
     font-size: 28px;
+    @include SP {
+      font-size: 16px;
+      padding-left: 50px;
+    }
   }
   &__hamberger {
     display: flex;

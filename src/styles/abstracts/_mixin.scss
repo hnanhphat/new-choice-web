@@ -52,7 +52,7 @@ $browser_prefix: ("-webkit-", "-moz-", "-ms-", "-o-", "");
 }
 
 @mixin hover {
-  @include PC {
+  @media only screen and (min-width: 1025px) {
     &:hover {
       @content;
     }

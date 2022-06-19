@@ -1,36 +1,59 @@
 @import "../../../styles/style.scss";
 
 .Contact {
+  background: #fff url("../../../images//common//bg_texture.png") top left/500px repeat;
   padding: 150px 20px;
   text-align: center;
   position: relative;
-  &::before {
-    content: '';
+  .Line {
     position: absolute;
-    background: #fff;
     width: 2px;
     height: 100px;
     top: 0;
     left: 50%;
+    overflow: hidden;
     @include transform_c(translateX(-50%));
+    &::before {
+      content: "";
+      position: absolute;
+      animation: movingDown 2s infinite;
+      background: #000;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
   }
   &__Heading {
+    color: #000;
     font-size: 48px;
     font-weight: bold;
     padding-bottom: 30px;
   }
   &__Btn {
-    background: #fff;
-    border: 3px solid #fff;
+    background: #000;
+    border: 3px solid #000;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    color: #000;
+    color: #fff;
     font-size: 14px;
     padding: 10px 20px;
-    @include transition_c(all .3s ease-out);
+    @include transition_c(all 0.3s ease-out);
     @include hover {
       background: transparent;
-      color: #fff;
+      color: #000;
     }
+  }
+}
+
+@keyframes movingDown {
+  0% {
+    @include transform_c(translateY(-100%));
+  }
+  50% {
+    @include transform_c(translateY(0));
+  }
+  100% {
+    @include transform_c(translateY(100%));
   }
 }

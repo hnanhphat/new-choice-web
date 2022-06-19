@@ -14,20 +14,32 @@
       display: flex;
       width: 25%;
       padding: 0 20px 40px;
+      @include SP {
+        width: 100%;
+      }
       &:nth-child(1) {
-        display: flex;
         align-items: center;
         justify-content: center;
-        // width: 50%;
+        @include SP {
+          justify-content: flex-start;
+        }
       }
       a {
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        display: flex;
         -webkit-perspective: 150rem;
         perspective: 150rem;
         position: relative;
+        z-index: 1;
         .Front {
+          backface-visibility: hidden;
+          -webkit-backface-visibility: hidden;
           background: black;
-          box-shadow: 0 0 5px rgba($color: white, $alpha: 0.1);
           border-radius: 15px;
+          box-shadow: 0 0 5px rgba($color: white, $alpha: 0.4);
+          display: flex;
+          flex-direction: column;
           overflow: hidden;
           @include transition_c(all 0.5s ease-out);
           .Box {
@@ -48,8 +60,15 @@
             }
           }
           .Info {
+            flex: 1 0 auto;
+            display: flex;
+            flex-direction: column;
             padding: 10px;
             &__Name {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex: 1 0 auto;
               text-align: center;
             }
             &__Quote {
@@ -72,6 +91,9 @@
           left: 0;
           @include transform_c(rotateY(180deg));
           @include transition_c(all 0.5s ease-out);
+          @media only screen and (max-width: 1024px) {
+            opacity: 0;
+          }
           .View {
             font-size: 16px;
           }

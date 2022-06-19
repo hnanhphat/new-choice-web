@@ -1,7 +1,7 @@
 @import "../../../styles/style.scss";
 
 .OurSpace {
-  background: darkgrey;
+  background: #fff url('../../../images//common//bg_texture.png') top left/500px repeat;
   padding: 100px 0;
   &__Container {
     display: flex;
@@ -9,9 +9,15 @@
     width: calc(100% - 40px);
     max-width: 1000px;
     margin: 0 auto;
+    @include SP {
+      flex-direction: column-reverse;
+    }
     .Content {
       width: 75%;
       padding: 0 20px;
+      @include SP {
+        width: 100%;
+      }
       &__Carousel {
         font-size: 0;
         line-height: 0;
@@ -36,6 +42,9 @@
           z-index: 1;
           @include transform_c(translateY(-50%));
           @include transition_c(all 0.3s ease-out);
+          @media only screen and (max-width: 1024px) {
+            opacity: 1;
+          }
           &::before {
             content: "";
             position: absolute;
@@ -100,6 +109,8 @@
         }
       }
       &__Txt {
+        color: #000;
+        font-size: 14px;
         padding: 20px;
         text-align: justify;
       }
@@ -109,6 +120,9 @@
       justify-content: center;
       width: 25%;
       padding: 50px 0;
+      @include SP {
+        width: 100%;
+      }
     }
   }
 }

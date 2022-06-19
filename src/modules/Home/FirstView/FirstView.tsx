@@ -7,6 +7,12 @@ import img_firstview from "../../../images/home/img_firstview.jpeg";
 const FirstView = () => {
   return (
     <section className={styles.FirstView}>
+      <div className={styles.FirstView__Box}>
+        <div
+          className={styles.Img}
+          style={{ backgroundImage: `url('${img_firstview}')` }}
+        ></div>
+      </div>
       <div className={styles.FirstView__Container}>
         <div className={styles.Content}>
           <div className={styles.Logo}>
@@ -23,12 +29,6 @@ const FirstView = () => {
             Book Now
           </Link>
         </div>
-      </div>
-      <div className={styles.FirstView__Box}>
-        <div
-          className={styles.Img}
-          style={{ backgroundImage: `url('${img_firstview}')` }}
-        ></div>
       </div>
     </section>
   );

@@ -10,21 +10,26 @@
     width: calc(100% - 40px);
     max-width: 1000px;
     margin: 0 auto;
-    .Logo {
-      width: 140px;
-      img {
-        width: 100%;
-      }
+    @include SP {
+      flex-direction: column;
     }
     .Heading {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 40%;
+      @include SP {
+        width: 100%;
+        padding-bottom: 40px;
+      }
     }
     .Carousel {
       width: 60%;
       padding-left: 100px;
+      @include SP {
+        width: 100%;
+        padding-left: 0;
+      }
       .Item {
         .Img {
           @include aspect-ratio(390, 585);
@@ -46,13 +51,13 @@
           border-top-left-radius: 20px;
           border-bottom-right-radius: 20px;
           top: calc(50% - 6px);
-          @include transform_c(translateY(-100%))
+          @include transform_c(translateY(-100%));
         }
         &:nth-of-type(2) {
           border-bottom-left-radius: 20px;
           border-top-right-radius: 20px;
           bottom: calc(50% - 6px);
-          @include transform_c(translateY(100%))
+          @include transform_c(translateY(100%));
         }
       }
     }
@@ -60,9 +65,39 @@
       width: 100%;
       padding-top: 40px;
       text-align: right;
+      @include SP {
+        text-align: center;
+      }
       a {
-        border-bottom: 1px solid currentColor;
         font-size: 16px;
+        padding-right: 20px;
+        position: relative;
+        @include hover {
+          &::after {
+            right: 0;
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          background: currentColor;
+          width: calc(100% - 20px);
+          height: 1px;
+          bottom: 0;
+          left: 0;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          border-top: 1px solid #fff;
+          border-right: 1px solid #fff;
+          width: 6px;
+          height: 6px;
+          bottom: 6px;
+          right: 8px;
+          @include transform_c(rotate(45deg));
+          @include transition_c(all 0.3s ease-out);
+        }
       }
     }
   }

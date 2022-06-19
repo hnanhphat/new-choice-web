@@ -1,0 +1,131 @@
+@import "../../../styles/style.scss";
+
+.Form {
+  background: rgba($color: #000, $alpha: 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  @include transition_c(all 0.3s ease-out);
+  &__Container {
+    background: #fff;
+    border-radius: 20px;
+    width: calc(100% - 40px);
+    max-width: 600px;
+    max-height: 800px;
+    padding: 20px;
+    position: relative;
+    .Close {
+      cursor: pointer;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 20px;
+      right: 20px;
+      z-index: 5;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background: #000;
+        width: 2px;
+        height: 30px;
+        top: 50%;
+        left: 50%;
+        @include transform_c(translate(-50%, -50%) rotate(45deg));
+      }
+      &::after {
+        @include transform_c(translate(-50%, -50%) rotate(-45deg));
+      }
+    }
+    .Heading {
+      color: #000;
+      position: relative;
+      &__Ttl {
+        font-family: $bebas;
+        font-size: 40px;
+      }
+      &__Sub {
+        font-size: 18px;
+      }
+    }
+    .Detail {
+      &__Info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 30px;
+        li {
+          width: calc(50% - 10px);
+          margin-bottom: 20px;
+          position: relative;
+          @include SP {
+            width: 100%;
+          }
+          input,
+          select {
+            @include add_prefix(appearance, none);
+            background: #fff;
+            border: 1px solid #000;
+            border-radius: 5px;
+            width: 100%;
+            height: 40px;
+            font-size: 16px;
+            padding: 0 20px;
+            outline: none;
+            @include transition_c(all 0.3s ease-out);
+
+            &:focus {
+              border: 2px solid #000 !important;
+              & ~ span {
+                font-size: 12px;
+                top: -10px;
+              }
+            }
+          }
+          span {
+            position: absolute;
+            background: #fff;
+            border-radius: 5px;
+            color: #000;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            padding: 0 8px;
+            top: 10px;
+            left: 10px;
+            @include transition_c(all 0.3s ease-out);
+          }
+        }
+      }
+      &__Booking {
+        background: #000;
+        border: 1px solid #000;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        color: #fff;
+        display: block;
+        font-size: 16px;
+        padding: 10px 40px;
+        margin: 30px auto;
+        @include transition_c(all 0.3s ease-out);
+        @include hover {
+          background: transparent;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  &--Active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
