@@ -1,0 +1,55 @@
+@import "../../styles/style.scss";
+
+.about {
+  background: #fff url("../../images/common//bg_texture.png") top left/500px repeat;
+  min-height: 100vh;
+  padding-top: 90px;
+  @include SP {
+    padding-top: 70px;
+  }
+  &__container {
+    color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: calc(100% - 40px);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 120px 0;
+    @include SP {
+      padding: 60px 0;
+    }
+    .img {
+      @include aspect-ratio(1366, 2048);
+      width: 45%;
+      @include SP {
+        width: 100%;
+      }
+    }
+    .content {
+      width: 45%;
+      @include SP {
+        width: 100%;
+        padding-top: 20px;
+      }
+      &__name {
+        font-size: 46px;
+        font-weight: bold;
+        @include SP {
+          font-size: 32px;
+        }
+      }
+      &__about {
+        p {
+          font-size: 18px;
+          margin: 16px 0;
+          line-height: 34px;
+          @include SP {
+            font-size: 16px;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+  }
+}

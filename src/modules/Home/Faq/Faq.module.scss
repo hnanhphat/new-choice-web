@@ -1,0 +1,66 @@
+@import "../../../styles/style.scss";
+
+.Faq {
+  background: #fff url('../../../images//common//bg_texture.png') top left/500px repeat;
+  padding: 100px 0;
+  &__Container {
+    display: flex;
+    width: calc(100% - 40px);
+    max-width: 1000px;
+    margin: 0 auto;
+    @include SP {
+      flex-direction: column;
+    }
+    .Heading {
+      width: 25%;
+      @include SP {
+        width: 100%;
+      }
+    }
+    .List {
+      border-top: 1px solid currentColor;
+      width: 75%;
+      @include SP {
+        width: 100%;
+        margin-top: 40px;
+      }
+      li {
+        border-bottom: 1px solid currentColor;
+        color: #000;
+        .Question {
+          color: #000;
+          width: 100%;
+          font-size: 20px;
+          padding-left: 20px;
+          padding: 20px 0 20px 20px;
+          text-align: left;
+          position: relative;
+          @include SP {
+            font-size: 18px;
+          }
+          &::before {
+            content: '';
+            position: absolute;
+            background: currentColor;
+            width: 10px;
+            height: 1px;
+            top: 30px;
+            left: 0;
+          }
+        }
+        .Answer {
+          color: #000;
+          display: none;
+          font-size: 16px;
+          padding-left: 40px;
+          @include SP {
+            font-size: 14px;
+          }
+          &--Active {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

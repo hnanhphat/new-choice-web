@@ -119,7 +119,7 @@ const OurSpace = () => {
           </p>
         </div>
         <div className={styles.Heading}>
-          <HomeHeading heading="ourspace" color="black" />
+          <HomeHeading heading="ourspace" color="white" />
         </div>
       </div>
     </section>

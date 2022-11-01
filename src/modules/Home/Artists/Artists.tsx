@@ -15,7 +15,7 @@ const Artists = () => {
     <section className={styles.Artists}>
       <ul className={styles.Artists__List}>
         <li>
-          <HomeHeading heading="artists" color="white" />
+          <HomeHeading heading="artists" color="black" />
         </li>
         <li>
           <Link to="/">

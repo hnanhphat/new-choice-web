@@ -1,0 +1,63 @@
+@import "../../styles/style.scss";
+
+.art {
+  background: #fff url("../../images/common//bg_texture.png") top left/500px repeat;
+  min-height: 100vh;
+  padding-top: 90px;
+  @include SP {
+    padding-top: 70px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: calc(100% - 40px);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 120px 0;
+    li {
+      width: 25%;
+      padding: 0 20px 40px;
+      position: relative;
+      .img {
+        @include aspect-ratio(272, 406);
+        filter: grayscale(100%);
+        overflow: hidden;
+        @include transition_c(all 0.5s ease-out);
+        &:hover {
+          filter: grayscale(0);
+          .thumb {
+            @include transform_c(scale(1.05));
+          }
+          ~ .content {
+            opacity: 0;
+            @include transform_c(translateX(10px));
+          }
+        }
+        .thumb {
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          @include transition_c(all 0.5s ease-out);
+        }
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 50px;
+        left: 30px;
+        z-index: 1;
+        @include transition_c(all 0.5s ease-out);
+        strong {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 @import "../../../styles/style.scss";
 
 .Artists {
-  background: black;
+  background: #fff url('../../../images//common//bg_texture.png') top left/500px repeat;
   padding: 100px 0;
   &__List {
     display: flex;
@@ -96,6 +96,7 @@
           }
           .View {
             font-size: 16px;
+            font-weight: bold;
           }
         }
 

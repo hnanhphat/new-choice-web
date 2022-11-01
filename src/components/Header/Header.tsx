@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { LanguageContext } from "../../context/LanguageContext";
+import { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../images/common/logo.jpeg";
 import "./Header.scss";
@@ -6,9 +7,9 @@ import "./Header.scss";
 const Header = () => {
   const [showHeader, setShowHeader] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-  const [language, setLanguage] = useState(true);
   const [subPage, setSubPage] = useState(false);
   const location = useLocation();
+  const locale = useContext(LanguageContext);
 
   useEffect(() => {
     window.onscroll = () => {
@@ -23,7 +24,7 @@ const Header = () => {
   useEffect(() => {
     setShowMenu(false);
     window.scrollTo(0, 0);
-    if(location.pathname !== '/') {
+    if (location.pathname !== "/") {
       setSubPage(true);
     } else {
       setSubPage(false);
@@ -46,14 +47,14 @@ const Header = () => {
       >
         <div className={`language ${showMenu ? "language--active" : ""}`}>
           <button
-            className={language ? "active" : ""}
-            onClick={() => setLanguage(!language)}
+            className={locale.lang === "ns1" ? "active" : ""}
+            onClick={() => locale.setLang && locale.setLang("ns1")}
           >
             EN
           </button>
           <button
-            className={language ? "" : "active"}
-            onClick={() => setLanguage(!language)}
+            className={locale.lang === "ns2" ? "active" : ""}
+            onClick={() => locale.setLang && locale.setLang("ns2")}
           >
             VN
           </button>
@@ -63,19 +64,16 @@ const Header = () => {
       <div className={`header__menu ${showMenu ? "header__menu--active" : ""}`}>
         <ul className="container">
           <li>
-            <Link to="#about">About</Link>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
           </li>
           <li>
             <Link to="/tattoos">Tattoo</Link>
           </li>
           <li>
-            <Link to="#art">Art Works</Link>
-          </li>
-          <li>
-            <Link to="#conventions">Conventions</Link>
-          </li>
-          <li>
-            <Link to="#contact">Contact</Link>
+            <Link to="/art-works">Art Works</Link>
           </li>
         </ul>
       </div>

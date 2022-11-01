@@ -177,6 +177,9 @@
           line-height: 84px;
           text-decoration: none;
           position: relative;
+          @include SP {
+            font-size: 48px;
+          }
           &:hover::before {
             width: 100%;
           }

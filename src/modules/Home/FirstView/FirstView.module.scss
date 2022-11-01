@@ -57,15 +57,27 @@
       .Btn {
         background: #fff;
         border: 3px solid #fff;
-        border-top-left-radius: 20px;
-        border-bottom-right-radius: 20px;
+        border-radius: 25px;
         color: #000;
         font-size: 14px;
-        padding: 10px 20px;
+        font-weight: bold;
+        padding: 10px 30px 10px 20px;
+        position: relative;
         @include transition_c(all 0.3s ease-out);
         @include hover {
           background: transparent;
           color: #fff;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          border-top: 1px solid currentColor;
+          border-right: 1px solid currentColor;
+          width: 6px;
+          height: 6px;
+          top: 50%;
+          right: 14px;
+          transform: translateY(-50%) rotate(45deg);
         }
       }
     }
@@ -85,6 +97,9 @@
       background-size: cover;
       background-repeat: no-repeat;
       width: 100%;
+      @include SP {
+        box-shadow: 0 -120px 120px 0 black inset;
+      }
     }
   }
 }
